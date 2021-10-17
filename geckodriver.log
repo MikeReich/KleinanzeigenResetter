@@ -1,0 +1,34 @@
+1634126853933	geckodriver	INFO	Listening on 127.0.0.1:53029
+1634126856958	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\x240\\AppData\\Local\\Temp\\rust_mozprofilefbHJ1l"
+1634126863801	geckodriver	INFO	Listening on 127.0.0.1:56680
+1634126867124	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\x240\\AppData\\Local\\Temp\\rust_mozprofile8gTLvf"
+1634126869074	Marionette	INFO	Marionette enabled
+[GFX1-]: Fallback WR to SW-WR + D3D11
+[GFX1-]: Failed to connect GPU process
+[Parent 23268, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+[GFX1-]: [D3D11] failed to get compositor device.
+[GFX1-]: Failed to initialize CompositorD3D11 for SWGL: FEATURE_FAILURE_D3D11_NO_DEVICE
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\x240\\AppData\\Local\\Temp\\rust_mozprofile8gTLvf\\search.json.mozlz4", (void 0)))
+[GFX1-]: [D3D11] failed to get compositor device.
+[GFX1-]: Failed to initialize CompositorD3D11 for SWGL: FEATURE_FAILURE_D3D11_NO_DEVICE
+JavaScript error: resource://gre/modules/IndexedDB.jsm, line 101: TransactionInactiveError: A request was placed against a transaction which is currently not active, or which is finished.
+1634126878628	Marionette	INFO	Listening on port 56688
+1634126879361	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1634126915461	Marionette	INFO	Stopped listening on port 56688
+JavaScript error: resource:///modules/Interactions.jsm, line 230: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+console.error: (new Error("SessionFile is closed", "resource:///modules/sessionstore/SessionFile.jsm", 452))
+nd: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\x240\\AppData\\Local\\Temp\\rust_mozprofileo4kyI4"
+1634126924022	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\x240\\AppData\\Local\\Temp\\rust_mozprofileo4kyI4\\search.json.mozlz4", (void 0)))
+1634126930511	Marionette	INFO	Listening on port 49754
+1634126931163	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://www.ebay-kleinanzeigen.de/c3650cdf-216a-4ba2-80b0-9d6c540b105e58d2670b-ea0f-484e-b88c-0e2c1499ec9bd71e4b42-8570-44e3-89b6-845326fa43b6, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x98000C,name=PVR::Msg_InitCrashReporter) Channel error: cannot send/recv
+
+JavaScript warning: https://www.ebay-kleinanzeigen.de/m-einloggen.html?targetUrl=/, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1634126959119	Marionette	INFO	Stopped listening on port 49754
+JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
