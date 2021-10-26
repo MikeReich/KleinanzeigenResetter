@@ -68,18 +68,39 @@ def checkImapLogin(username, password, check=False):
         if not check:
             return a[2: 4]
         else:
-            timeout = time.time() + 60*2   # 2 Minuten Timeout
+            tries = 0
             while True:
-                if time.time() > timeout:
-                    break;
+                if tries == 5:
+                    print("[+] Überprüfe Mails11..")
+                    break
 
                 print("[+] Überprüfe Mails..")
-                mail.select("INBOX")
-                status, email_ids = mail.search(None, '(AND (UNSEEN) (FROM "noreply@ebay-kleinanzeigen.de"))')
-                print(email_ids.count())
 
-                print("[+] Keine E-Mail gefunden.. warte 20 Sekunden..")
-                sleep(20)
+                try:
+                    sleep(2)
+                    mail.select("INBOX")
+                    subject = 'Passwort zurücksetzen'
+
+                    result, data = mail.search(None, '(UNSEEN FROM "noreply@ebay-kleinanzeigen.de")')
+
+                    ids = data[0]  # data is a list.
+                    id_list = ids.split()  # ids is a space separated string
+                    latest_email_id = id_list[-1]  # get the latest
+
+                    result, data = mail.fetch(latest_email_id,
+                                              "(RFC822)")  # fetch the email body (RFC822) for the given ID
+
+                    raw_email = data[0][1]
+                    raw_email_string = raw_email.decode('utf-8')
+                    #email_message = email.message_from_string(raw_email_string)
+                    print(raw_email_string)
+
+                    tries += 1
+                    print(f"[+] Keine E-Mail gefunden.. warte 20 Sekunden.. | Versuch {str(tries)}/5")
+                    sleep(20)
+                except Exception as e:
+                    print("Ein Fehler ist aufgetreten: " + str(e))
+
 
             print("[-] Keine E-Mail erhalten...")
     except imaplib.IMAP4.error:
